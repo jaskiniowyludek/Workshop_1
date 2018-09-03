@@ -1,12 +1,13 @@
 package b_Lottery;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class LotteryLotto {
     public static void main(String[] args) {
 
-        System.out.println(Arrays.toString(get6NumberOfUser()));
+        System.out.println(Arrays.toString(get6RandomNumbers()));
     }
 
     static int[] get6NumberOfUser() {
@@ -40,12 +41,34 @@ public class LotteryLotto {
             if (helper1==0&&helper2==0){
                 userNumbers[licznik]=number;
                 licznik++;
-                System.out.println("Licznik to:"+licznik);
+              //  System.out.println("Licznik to:"+licznik);
             }
 
         }
             while (userNumbers[5] == 0) ;
+            Arrays.sort(userNumbers);
             return userNumbers;
+        }
+
+        static int[] get6RandomNumbers(){
+        //Integer[]	arr	=	new	Integer[49];
+            //for	(int	i	=	0;	i	<	arr.length;	i++)	{
+            //		arr[i]	=	i	+	1;
+            //}
+            //System.out.println(Arrays.toString(arr));
+            //Collections.shuffle(Arrays.asList(arr));
+            //System.out.println(Arrays.toString(arr));
+            int[] randomNumbers = new int[6];
+            Random r = new Random();
+            int number = 0;
+            for (int i = 0; i<randomNumbers.length; i++){
+                number =r.nextInt(49)+1;
+                if (number==randomNumbers[i]){
+                    i--;
+                }else randomNumbers[i]=number;
+            }
+            Arrays.sort(randomNumbers);
+            return randomNumbers;
         }
     }
 
