@@ -21,7 +21,7 @@ public class GuessNumberGame2 {
         String bingo = "Bingo!";
         while (scan.hasNext()){
             if (scan.next().equals(start)){
-                System.out.println("The number you thought is: "+guess);
+                System.out.println("Attempt n."+(counter+1)+" The number you thought is: "+guess);
                 counter++;
                 break;
         }
@@ -29,7 +29,7 @@ public class GuessNumberGame2 {
         do {
             if (counter>=1 && (answer.equals(tooBig)||answer.equals(tooSmall))){
                 guess = ((max-min)/2)+min;
-                System.out.println("The number you thought is: "+guess);
+                System.out.println("Attempt n."+(counter+1)+" The number you thought is: "+guess);
                 counter++;
             }
             while (scan.hasNextLine()){
