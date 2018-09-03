@@ -7,13 +7,35 @@ import java.util.Scanner;
 public class LotteryLotto {
     public static void main(String[] args) {
 
-        System.out.println(Arrays.toString(get6RandomNumbers()));
+        int[] userNumbers = get6NumberOfUser();
+        int[] lotteryNumbers = get6RandomNumbers();
+        StringBuilder sb = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
+        for (int i = 0; i<userNumbers.length;i++){
+            sb.append(userNumbers[i]).append(" ");
+        }
+        for (int i = 0; i<lotteryNumbers.length;i++){
+            sb2.append(lotteryNumbers[i]).append(" ");
+        }
+        System.out.println("Your selected numbers: "+sb.toString());
+        System.out.println("Lotto numbers are: "+sb2.toString());
+        int counter = 0;
+        for (int i =0; i<userNumbers.length; i++){
+            for (int j = 0; j<lotteryNumbers.length;j++){
+                if (userNumbers[i]==lotteryNumbers[j]){
+                    counter++;
+                }
+            }
+        }
+        if (counter<3){
+            System.out.println("Sorry! You haven't won anything. To win you have to guess at least 3 numbers! Try again and good luck!");
+        }else System.out.println("Congrats! You guessed: "+counter+" numbers!");
     }
 
     static int[] get6NumberOfUser() {
         int[] userNumbers = new int[6];
         int number = 0;
-        int licznik = 0;
+        int counter = 0;
         int helper1 = 0;
         int helper2 = 0;
         Scanner scan = new Scanner(System.in);
@@ -39,8 +61,8 @@ public class LotteryLotto {
                 }
             }
             if (helper1==0&&helper2==0){
-                userNumbers[licznik]=number;
-                licznik++;
+                userNumbers[counter]=number;
+                counter++;
               //  System.out.println("Licznik to:"+licznik);
             }
 
