@@ -14,6 +14,7 @@ public class GuessNumberGame2 {
         int min = 0;
         int max = 1000;
         int counter = 0;
+        String answer = "";
         int guess = ((max-min)/2)+min;
         String tooSmall = "too small";
         String tooBig = "too big";
@@ -25,13 +26,29 @@ public class GuessNumberGame2 {
                 break;
         }
         }
-        String answer = "";
-        while (scan.hasNextLine()){
-            answer = scan.nextLine();
-            if (answer.equals(tooBig)||answer.equals(tooSmall)||answer.equals(bingo)){
-                break;
-            }else System.out.println("Please, type \"too small\", \"too big\" or \"Bingo!\"");
-        }
+        do {
+            if (counter>=1 && (answer.equals(tooBig)||answer.equals(tooSmall))){
+                guess = ((max-min)/2)+min;
+                System.out.println("The number you thought is: "+guess);
+                counter++;
+            }
+            while (scan.hasNextLine()){
+                answer = scan.nextLine();
+                if (answer.equals(tooBig)||answer.equals(tooSmall)||answer.equals(bingo)){
+                    break;
+                }else System.out.println("Please, type \"too small\", \"too big\" or \"Bingo!\"");
+            }
+            if (answer.equals(bingo)){
+                System.out.println("I won!");
+            }else if (answer.equals(tooBig)){
+                max=guess;
+               // System.out.println("Wartość counter to: "+counter);
+            }else if (answer.equals(tooSmall)){
+                min = guess;
+               // System.out.println("Wartość counter to: "+counter);
+            }
+        }while (!(counter==10));
 
+        System.out.println("Game over!");
     }
 }
