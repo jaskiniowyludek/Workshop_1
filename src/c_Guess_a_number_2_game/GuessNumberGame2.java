@@ -24,7 +24,7 @@ public class GuessNumberGame2 {
                 System.out.println("Attempt n."+(counter+1)+" The number you thought is: "+guess);
                 counter++;
                 break;
-        }
+        }else System.out.println("Type \" start\" if you are ready");
         }
         do {
             if (counter>=1 && (answer.equals(tooBig)||answer.equals(tooSmall))){
@@ -40,6 +40,7 @@ public class GuessNumberGame2 {
             }
             if (answer.equals(bingo)){
                 System.out.println("I won!");
+                break;
             }else if (answer.equals(tooBig)){
                 max=guess;
                // System.out.println("Wartość counter to: "+counter);

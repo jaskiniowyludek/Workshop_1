@@ -51,13 +51,14 @@ public class LotteryLotto {
                 System.out.println("Error! Type a number between 1 and 49");
                               helper1=1;
                               helper2=0;
-            } else
-                helper1=0;
-            helper2=0;
-            for (int i = 0;i<userNumbers.length;i++){
-                if (number==userNumbers[i]){
-                    System.out.println("You have already type this number! Type anotherone!");
-                    helper2=1;
+            } else {
+                helper1 = 0;
+                helper2 = 0;
+                for (int i = 0; i < userNumbers.length; i++) {
+                    if (number == userNumbers[i]) {
+                        System.out.println("You have already type this number! Type anotherone!");
+                        helper2 = 1;
+                    }
                 }
             }
             if (helper1==0&&helper2==0){
