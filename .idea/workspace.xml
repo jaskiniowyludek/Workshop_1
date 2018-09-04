@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5a10dc8-2fc8-417b-8999-7ea40337c7fd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/c_Guess_a_number_2_game/GuessNumberGame2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/c_Guess_a_number_2_game/GuessNumberGame2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d_Dices/Dices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d_Dices/Dices.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,41 +17,17 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
+            <state relative-caret-position="24">
               <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuessNumberGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/a_Guess_a_number_game/GuessNumberGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LotteryLotto.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dices.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dices.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/d_Dices/Dices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="270">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -75,9 +49,9 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/a_Guess_a_number_game/GuessNumberGame.java" />
-        <option value="$PROJECT_DIR$/src/d_Dices/Dices.java" />
         <option value="$PROJECT_DIR$/src/c_Guess_a_number_2_game/GuessNumberGame2.java" />
         <option value="$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java" />
+        <option value="$PROJECT_DIR$/src/d_Dices/Dices.java" />
       </list>
     </option>
   </component>
@@ -165,7 +139,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LotteryLotto">
+  <component name="RunManager" selected="Application.Dices">
+    <configuration name="Dices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d_Dices.Dices" />
+      <module name="Workshop_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="d_Dices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="GuessNumberGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="a_Guess_a_number_game.GuessNumberGame" />
       <module name="Workshop_1" />
@@ -208,9 +192,11 @@
       <item itemvalue="Application.GuessNumberGame" />
       <item itemvalue="Application.LotteryLotto" />
       <item itemvalue="Application.GuessNumberGame2" />
+      <item itemvalue="Application.Dices" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Dices" />
         <item itemvalue="Application.LotteryLotto" />
         <item itemvalue="Application.GuessNumberGame2" />
         <item itemvalue="Application.GuessNumberGame" />
@@ -229,12 +215,12 @@
       <updated>1535885138002</updated>
       <workItem from="1535885141953" duration="22604000" />
       <workItem from="1535987240997" duration="2671000" />
-      <workItem from="1536052459272" duration="725000" />
+      <workItem from="1536052459272" duration="4663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26000000" />
+    <option name="totallyTimeSpent" value="29938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1215" height="804" extended-state="6" />
@@ -242,6 +228,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32986626" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -249,7 +236,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32986626" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32986626" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.45170876" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -267,7 +254,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32986626" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +264,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -365,30 +351,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/a_Guess_a_number_game/GuessNumberGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/d_Dices/Dices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/c_Guess_a_number_2_game/GuessNumberGame2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -398,11 +360,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
+        <state relative-caret-position="-11">
           <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/a_Guess_a_number_game/GuessNumberGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/d_Dices/Dices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
