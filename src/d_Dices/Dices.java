@@ -6,20 +6,28 @@ import java.util.StringTokenizer;
 public class Dices {
     public static void main(String[] args) {
 
-        getDicesPoints("2D100-10");
+        getDicesPoints("100D12-1+1");
+
     }
     static int getDicesPoints(String diceCode){
         int points = 0;
         diceCode = diceCode.toUpperCase();
         char[] codeParts = diceCode.toCharArray();
+        int index = getIndexOfOperator(codeParts);
         int throwsNumber = getNumberOfThrows(codeParts,getIndexOfD(codeParts));
         String diceType = getDiceType(codeParts,getIndexOfD(codeParts));
-        String diceTypeNumber = diceType.substring(1);
-        int diceNumber = Integer.parseInt(diceTypeNumber);
+        String diceTypeNumber = "";
+        int diceNumber=0;
+        try {
+            diceTypeNumber = diceType.substring(1);
+            diceNumber = Integer.parseInt(diceTypeNumber);
+        }catch (Exception e){
+            System.out.println("Error! Invalid code!!!");
+        }
         char operator = getOperator(codeParts);
         int pointsToSum = getLastNumber(codeParts);
  //       String[] dices = {"D3", "D4", "D6", "D8", "D10", "D12", "D20", "D100"};
-        if (throwsNumber==-1||diceType.equals("")||pointsToSum==-1){
+        if (throwsNumber==-1||diceType.equals("")||pointsToSum==-1||index==-1){
             System.out.println("Error! Check your code and try again!");
         }else {
             Random r = new Random();
