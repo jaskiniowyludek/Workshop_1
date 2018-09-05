@@ -88,8 +88,13 @@ public class Dices {
 
         return numberOfThrows;
     }
-    static String getOperator(){
+    static String getOperator(char[] parts, int index){
         String operator = "";
+        String diceType="";
+        index=getIndexOfD(parts);
+        for (int i =index;i<parts.length;i++){
+            diceType= diceType + String.valueOf(parts[i]);
+        }
 
         return operator;
     }

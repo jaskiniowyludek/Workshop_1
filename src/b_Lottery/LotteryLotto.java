@@ -43,7 +43,7 @@ public class LotteryLotto {
             System.out.println("Type your number between 1 and 49: ");
             while (!scan.hasNextInt()) {
                 scan.next();
-                System.out.println("That is not a number! Try again!");
+                System.out.println("That is not a correct number! Try again!");
             }
             number = scan.nextInt();
 
