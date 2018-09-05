@@ -4,9 +4,11 @@ import java.util.StringTokenizer;
 
 public class Dices {
     public static void main(String[] args) {
-        String test1 = "13D100-10";  //w głównej metody zrobić String diceCode toUpperCase!!
+        String test1 = "a3D100-10";  //w głównej metody zrobić String diceCode toUpperCase!!
         char[] test1Arr = test1.toCharArray();
-        System.out.println(getDiceType(test1Arr));
+        String type = getDiceType(test1Arr,getIndexOfD(test1Arr));
+        System.out.println(type);
+        System.out.println(getNumberOfThrows(test1Arr,getIndexOfD(test1Arr)));
 
       //  getDicesPoints("13D8-10");
     }
@@ -31,26 +33,31 @@ public class Dices {
         return points;
     }
 
-    static String getDiceType(char[] parts){
-
-        String diceType="";
-      //  String[] dices = {"D3", "D4", "D6", "D8", "D10", "D12", "D20", "D100"};
+    static int getIndexOfD(char[] parts) {
         int indexOfD = 0;
         int counter = 0;
-        for (int i = 0; i<parts.length;i++){
-            if (parts[i]=='D'){
+        for (int i = 0; i < parts.length; i++) {
+            if (parts[i] == 'D') {
                 counter++;
             }
         }
-        if (counter<1|| counter>1){
+        if (counter < 1 || counter > 1) {
             System.out.println("The code you introduced is not correct!");
-        }else {
-            for (int i =0; i<parts.length;i++){
-                if (parts[i]=='D'){
-                    indexOfD=i;
+        } else {
+            for (int i = 0; i < parts.length; i++) {
+                if (parts[i] == 'D') {
+                    indexOfD = i;
                 }
             }
-            for (int i =indexOfD;i<parts.length;i++){
+        }
+        return indexOfD;
+    }
+    static String getDiceType(char[] parts, int index){
+
+        index=getIndexOfD(parts);
+        String diceType="";
+      //  String[] dices = {"D3", "D4", "D6", "D8", "D10", "D12", "D20", "D100"};
+            for (int i =index;i<parts.length;i++){
                 diceType= diceType + String.valueOf(parts[i]);
             }
             StringTokenizer st = new StringTokenizer(diceType,"+-");
@@ -60,9 +67,30 @@ public class Dices {
                 diceType="";
                 System.out.println("The code you introduced is not correct!");
                 }
-            }
 
 
         return diceType;
+    }
+    static int getNumberOfThrows(char[] parts, int index){
+        int numberOfThrows = 0;
+        index=getIndexOfD(parts);
+        String number = "";
+        if (index>0){
+            for (int i =0;i<index;i++){
+                number=number+parts[i];
+            }
+            try {
+                numberOfThrows=Integer.parseInt(number);
+            }catch (Exception e){
+                System.out.println("The code you introduced is not correct!");
+            }
+        }
+
+        return numberOfThrows;
+    }
+    static String getOperator(){
+        String operator = "";
+
+        return operator;
     }
 }
