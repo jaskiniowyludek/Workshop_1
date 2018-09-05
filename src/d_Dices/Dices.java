@@ -1,35 +1,43 @@
 package d_Dices;
 
+import java.util.Random;
 import java.util.StringTokenizer;
 
 public class Dices {
     public static void main(String[] args) {
-        String test1 = "a3D100+10+";  //w głównej metody zrobić String diceCode toUpperCase!!
-        char[] test1Arr = test1.toCharArray();
-        System.out.println(getNumberOfThrows(test1Arr,getIndexOfD(test1Arr)));
-        String type = getDiceType(test1Arr,getIndexOfD(test1Arr));
-        System.out.println(type);
-        System.out.println(getOperator(test1Arr));
 
-      //  getDicesPoints("13D8-10");
+        getDicesPoints("2D100-10");
     }
     static int getDicesPoints(String diceCode){
         int points = 0;
-        int numberOfThrows = 0;
-        String diceType = "";
-        int lastNumber = 0;
-        String[] dices = {"D3", "D4", "D6", "D8", "D10", "D12", "D20", "D100"};
-            StringTokenizer st = new StringTokenizer(diceCode,"+-");
-            diceType=st.nextToken();
-        if (!(diceType.startsWith("D"))){
-            int start = diceType.indexOf("D");
-            numberOfThrows= Integer.parseInt(diceType.substring(0,start));
-            diceType=diceType.substring(start);
+        diceCode = diceCode.toUpperCase();
+        char[] codeParts = diceCode.toCharArray();
+        int throwsNumber = getNumberOfThrows(codeParts,getIndexOfD(codeParts));
+        String diceType = getDiceType(codeParts,getIndexOfD(codeParts));
+        String diceTypeNumber = diceType.substring(1);
+        int diceNumber = Integer.parseInt(diceTypeNumber);
+        char operator = getOperator(codeParts);
+        int pointsToSum = getLastNumber(codeParts);
+ //       String[] dices = {"D3", "D4", "D6", "D8", "D10", "D12", "D20", "D100"};
+        if (throwsNumber==-1||diceType.equals("")||pointsToSum==-1){
+            System.out.println("Error! Check your code and try again!");
+        }else {
+            Random r = new Random();
+            int smallPoints=0;
+            int counter = 1;
+            for (int i =1;i<=throwsNumber;i++){
+                smallPoints=r.nextInt(diceNumber)+1;
+                System.out.println("Your points in a "+counter+" throw: "+smallPoints);
+                counter++;
+                points+=smallPoints;
+            }
+           if (operator=='+'){
+                points+=pointsToSum;
+           }else if (operator=='-'){
+                points-=pointsToSum;
+           }
+            System.out.println("Your total number of points: "+points);
         }
-
-        System.out.println(diceType);
-        System.out.println(numberOfThrows);
-        char[] diceCodeParts = diceCode.toCharArray();
 
         return points;
     }
@@ -73,7 +81,7 @@ public class Dices {
         return diceType;
     }
     static int getNumberOfThrows(char[] parts, int index){
-        int numberOfThrows = 0;
+        int numberOfThrows = 1;
         index=getIndexOfD(parts);
         String number = "";
         if (index>0){
@@ -94,7 +102,7 @@ public class Dices {
 
         int index = getIndexOfOperator(parts);
         char operator = '0';
-        if (index==-1){
+        if (index==-1||index==parts.length){
             operator='0';
         }else operator=parts[index];
 
@@ -136,7 +144,7 @@ public class Dices {
             }catch (Exception e){
                 System.out.println("The code you introduced is not correct! " +
                         "Please, correct number of points to add/subtract!");
-                number=0;
+                number=-1;
             }
         }
         return number;
