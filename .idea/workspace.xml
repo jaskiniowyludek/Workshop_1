@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5a10dc8-2fc8-417b-8999-7ea40337c7fd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/d_Dices/Dices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d_Dices/Dices.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="Dices.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/d_Dices/Dices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+            <state relative-caret-position="1177">
+              <caret line="138" column="25" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -51,8 +50,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/a_Guess_a_number_game/GuessNumberGame.java" />
         <option value="$PROJECT_DIR$/src/c_Guess_a_number_2_game/GuessNumberGame2.java" />
-        <option value="$PROJECT_DIR$/src/d_Dices/Dices.java" />
         <option value="$PROJECT_DIR$/src/b_Lottery/LotteryLotto.java" />
+        <option value="$PROJECT_DIR$/src/d_Dices/Dices.java" />
       </list>
     </option>
   </component>
@@ -217,12 +216,12 @@
       <workItem from="1535885141953" duration="22604000" />
       <workItem from="1535987240997" duration="2671000" />
       <workItem from="1536052459272" duration="7164000" />
-      <workItem from="1536143390540" duration="7490000" />
+      <workItem from="1536143390540" duration="11420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39929000" />
+    <option name="totallyTimeSpent" value="43859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1215" height="804" extended-state="6" />
@@ -237,9 +236,9 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32986626" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32986626" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.45170876" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.45170876" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26261762" />
@@ -403,8 +402,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/d_Dices/Dices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+        <state relative-caret-position="1177">
+          <caret line="138" column="25" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
         </state>
       </provider>
     </entry>

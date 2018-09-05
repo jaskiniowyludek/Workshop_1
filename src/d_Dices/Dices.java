@@ -4,11 +4,12 @@ import java.util.StringTokenizer;
 
 public class Dices {
     public static void main(String[] args) {
-        String test1 = "a3D100-10";  //w głównej metody zrobić String diceCode toUpperCase!!
+        String test1 = "a3D100+10+";  //w głównej metody zrobić String diceCode toUpperCase!!
         char[] test1Arr = test1.toCharArray();
+        System.out.println(getNumberOfThrows(test1Arr,getIndexOfD(test1Arr)));
         String type = getDiceType(test1Arr,getIndexOfD(test1Arr));
         System.out.println(type);
-        System.out.println(getNumberOfThrows(test1Arr,getIndexOfD(test1Arr)));
+        System.out.println(getOperator(test1Arr));
 
       //  getDicesPoints("13D8-10");
     }
@@ -65,7 +66,7 @@ public class Dices {
             if (!(diceType.equals("D3")||diceType.equals("D4")||diceType.equals("D6")|| diceType.equals("D8")
             ||diceType.equals("D10")||diceType.equals("D12")||diceType.equals("D20")||diceType.equals("D100"))){
                 diceType="";
-                System.out.println("The code you introduced is not correct!");
+                System.out.println("The code you introduced is not correct! Error in dice type!!");
                 }
 
 
@@ -82,20 +83,62 @@ public class Dices {
             try {
                 numberOfThrows=Integer.parseInt(number);
             }catch (Exception e){
-                System.out.println("The code you introduced is not correct!");
+                System.out.println("The code you introduced is not correct! Number of throws should be a number!");
+                numberOfThrows=-1;
             }
         }
 
         return numberOfThrows;
     }
-    static String getOperator(char[] parts, int index){
-        String operator = "";
-        String diceType="";
-        index=getIndexOfD(parts);
-        for (int i =index;i<parts.length;i++){
-            diceType= diceType + String.valueOf(parts[i]);
-        }
+    static char getOperator(char[] parts){
+
+        int index = getIndexOfOperator(parts);
+        char operator = '0';
+        if (index==-1){
+            operator='0';
+        }else operator=parts[index];
 
         return operator;
+    }
+    static int getIndexOfOperator(char[] parts){
+        int indexOfOp = -1;
+        int countOperators = 0;
+        for (int i = 0; i<parts.length;i++){
+            if (parts[i]=='+'){
+                countOperators++;
+                indexOfOp=i;
+            }else if(parts[i]=='-'){
+                countOperators++;
+                indexOfOp=i;
+            }
+        }
+        if (countOperators>1){
+            System.out.println("The code you introduced is not correct! Too many \"+/-\"");
+            indexOfOp=-1;
+        }else if(countOperators==0){
+            indexOfOp=parts.length;
+        }
+        return indexOfOp;
+    }
+
+    static int getLastNumber(char[] parts){
+        int number = 0;
+        int index = getIndexOfOperator(parts);
+        String sameNumber ="";
+        if (index==-1||index==parts.length){
+            number=0;
+        }else {
+            for (int i =index+1;i<parts.length;i++){
+                sameNumber=sameNumber+parts[i];
+            }
+            try {
+                number = Integer.parseInt(sameNumber);
+            }catch (Exception e){
+                System.out.println("The code you introduced is not correct! " +
+                        "Please, correct number of points to add/subtract!");
+                number=0;
+            }
+        }
+        return number;
     }
 }
